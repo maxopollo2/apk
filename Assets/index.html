@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/javascript">
+{
+	protected override void OnCreate (Bundle bundle)
+	{
+		base.OnCreate (bundle);
+
+		InputStream input = Assets.Open ("my_asset.txt");
+	}
+}
+
+</script>
+
+
+</head>
+<body>
+Any raw assets you want to be deployed with your application can be placed in
+this directory (and child directories) and given a Build Action of "AndroidAsset".
+
+These files will be deployed with your package and will be accessible using Android's
+AssetManager, like this:
+
+public class ReadAsset : Activity
+
+Additionally, some Android functions will automatically load asset files:
+
+Typeface tf = Typeface.CreateFromAsset (Context.Assets, "fonts/samplefont.ttf");
+</body></html>
